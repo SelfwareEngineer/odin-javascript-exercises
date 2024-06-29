@@ -10,3 +10,7 @@ btn.onclick = alertFunction;
 
 // METHOD 3
 btn.addEventListener("click", alertFunction);
+
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
