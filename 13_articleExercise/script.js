@@ -14,5 +14,19 @@ container.appendChild(blueH3);
 
 // 3.
 
-// create and append container div first to avoid using `innerHTML()`
-let subContainer;
+// Create container div first so children have something to append to
+let subContainer = document.createElement("div");
+subContainer.style.border = "4px solid black";
+subContainer.style.backgroundColor = "pink";
+
+// Create and append children
+let divH1 = document.createElement("h1");
+divH1.textContent = "I'm in a div";
+subContainer.appendChild(divH1);
+
+let divP = document.createElement("p");
+divP.textContent = "ME TOO!";
+subContainer.appendChild(divP);
+
+// Don't ship parent node to the DOM until everyone's on board
+container.appendChild(subContainer);
