@@ -1,3 +1,6 @@
+const addItemButton = document.querySelector("#addItem");
+addItemButton.onclick = addItem();
+
 function addItem() {
   let itemContainer = document.createElement("div");
 
