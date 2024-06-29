@@ -1,5 +1,5 @@
 const addItemButton = document.querySelector("#addItem");
-addItemButton.onclick = addItem();
+addItemButton.onclick = addItem;
 
 function addItem() {
   let itemContainer = document.createElement("div");
@@ -14,4 +14,7 @@ function addItem() {
   removeButton.onclick = () => itemContainer.remove();
   removeButton.textContent = "Remove";
   itemContainer.appendChild(removeButton);
+
+  let body = document.querySelector("body");
+  body.appendChild(itemContainer);
 }
